@@ -7,8 +7,8 @@
 <link rel="canonical" href="__pageUrl__">
 <meta property="og:title" content="__pageTitle__">
 <meta property="og:description" content="__ogDescription__">
-<link rel="alternate" hreflang="zh-CN" href="https://purryc.github.io/kokoro-voice-gallery/">
-<link rel="alternate" hreflang="en" href="https://purryc.github.io/kokoro-voice-gallery/en.html">
+<link rel="alternate" hreflang="zh-CN" href="https://purryc.github.io/TTS-kokoro-voice-gallery/">
+<link rel="alternate" hreflang="en" href="https://purryc.github.io/TTS-kokoro-voice-gallery/en.html">
 <meta property="og:type" content="website">
 <meta property="og:url" content="__pageUrl__">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232c583e'/%3E%3Ctext x='8' y='24' fill='%23f6f3ed' font-size='24'%3EK%3C/text%3E%3C/svg%3E">
@@ -19,11 +19,12 @@
 
 .distribution{margin:0 0 24px;padding-bottom:16px}.distribution summary{display:flex;align-items:center;justify-content:space-between;width:100%;font-size:14px;color:var(--ink);gap:14px}.distribution summary:before{content:'▸';margin-right:5px}.distribution[open] summary:before{content:'▾'}.distribution summary span{margin-left:auto;font-size:12px;color:var(--muted)}.distribution table{width:100%;border-collapse:collapse;margin-top:10px;font-size:12px;font-variant-numeric:tabular-nums}.distribution th,.distribution td{padding:7px 10px;border-bottom:1px solid var(--line);text-align:right}.distribution th:first-child,.distribution td:first-child{text-align:left}.distribution th{font-weight:500;color:var(--muted)}.distribution tfoot{font-weight:650}.group-title{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:500;margin:25px 0 0;padding:18px 12px;background:var(--soft)}.group-title span{font-size:12px;color:var(--muted)}.ordinal{font-size:12px;font-weight:400;min-width:29px;font-variant-numeric:tabular-nums;color:var(--muted)}.footer{line-height:2}.footer a{text-underline-offset:3px;margin-right:12px}
 .mast-tools{display:flex;align-items:center;gap:22px}.locale-switch{display:flex;gap:2px;border:1px solid var(--line);border-radius:6px;padding:3px}.locale-switch a{padding:9px 11px;min-height:40px;text-decoration:none;font-size:12px;border-radius:3px}.locale-switch a[aria-current="page"]{background:var(--green);color:var(--paper)}.name>span:last-child{overflow-wrap:anywhere}.distribution summary strong{font-weight:500}.distribution summary span{max-width:65%;text-align:right}@media(max-width:640px){.mast-tools{gap:8px}.local{display:none}.brand{font-size:16px}.brand i{font-size:20px;margin-left:4px}.locale-switch a{padding:9px 8px}.row{grid-template-columns:44px minmax(0,1fr) 34px 76px;gap:5px}.actions .icon{width:38px}.row .sub{overflow-wrap:anywhere}.search-row select{max-width:125px}.group-title{font-size:18px}.distribution summary span{font-size:11px}.list-label{font-size:10px}.player{gap:10px}}
+.brand{letter-spacing:0}@media(max-width:640px){.brand{font-size:13px;line-height:1.5;overflow-wrap:anywhere}.mast{gap:10px}.mast-tools{flex-shrink:0}}
 </style>
 </head>
 <body>
 <main>
-<header class="mast"><div class="brand">KOKORO <i>voices</i></div><div class="mast-tools"><div data-i18n="community" class="local">__community__</div><nav class="locale-switch" data-i18n-aria="interface" aria-label="__interface__"><a href="index.html" data-locale="zh" lang="zh-CN" aria-current="__zhCurrent__">中文</a><a href="en.html" data-locale="en" lang="en" aria-current="__enCurrent__">English</a></nav></div></header>
+<header class="mast"><div class="brand">TTS-kokoro-voice-gallery</div><div class="mast-tools"><div data-i18n="community" class="local">__community__</div><nav class="locale-switch" data-i18n-aria="interface" aria-label="__interface__"><a href="index.html" data-locale="zh" lang="zh-CN" aria-current="__zhCurrent__">中文</a><a href="en.html" data-locale="en" lang="en" aria-current="__enCurrent__">English</a></nav></div></header>
 <section class="intro"><div><p data-i18n="eyebrow" class="eyebrow">__eyebrow__</p><h1 data-i18n="heading">__heading__</h1></div><span class="count" id="count"></span></section>
 <details class="distribution" open><summary><strong data-i18n="distribution">__distribution__</strong><span data-i18n="distributionSummary">__distributionSummary__</span></summary>__DISTRIBUTION__</details>
 <nav class="filters" data-i18n-aria="filters" aria-label="__filters__"><div class="tabs"><button class="filter" data-lang="all" aria-pressed="true" data-i18n="all">__all__</button><button class="filter" data-lang="zh" aria-pressed="false" data-i18n="zh">__zh__</button><button class="filter" data-lang="en" aria-pressed="false" data-i18n="en">__en__</button><button class="filter" data-lang="other" aria-pressed="false" data-i18n="other">__other__</button></div><button id="favorites" class="favorite-filter" aria-pressed="false" data-i18n="favorites">__favorites__</button></nav>
@@ -31,7 +32,7 @@
 <details class="sample-details"><summary data-i18n="script">__script__</summary><p id="sample-text"></p></details>
 <div class="list-label" aria-hidden="true"><span data-i18n="voice">__voice__</span><span data-i18n="preview">__preview__</span><span data-i18n="duration" style="text-align:right">__duration__</span><span data-i18n="actions" style="text-align:right">__actions__</span></div>
 <section id="list" data-i18n-aria="voiceList" aria-label="__voiceList__"></section>
-<p class="footer"><span data-i18n="independent">__independent__</span><br><a id="about-link" href="__aboutFile__" data-i18n="about">__about__</a><a href="https://github.com/purryc/kokoro-voice-gallery" data-i18n="github">__github__</a><a href="https://huggingface.co/hexgrad/Kokoro-82M" data-i18n="model">__model__</a></p>
+<p class="footer"><span data-i18n="independent">__independent__</span><br><a id="about-link" href="__aboutFile__" data-i18n="about">__about__</a><a href="https://github.com/purryc/TTS-kokoro-voice-gallery" data-i18n="github">__github__</a><a href="https://huggingface.co/hexgrad/Kokoro-82M" data-i18n="model">__model__</a></p>
 </main>
 <div class="player-wrap"><div class="player"><div><div class="now-label" id="now-label">__selected__</div><div class="now-title" id="now-title">Heart</div><div class="now-meta" id="now-meta"></div></div><audio id="audio" controls preload="metadata" data-i18n-aria="player" aria-label="__player__"></audio><a id="download" class="icon" download data-i18n-aria="downloadCurrent" aria-label="__downloadCurrent__"></a></div><p id="status" class="status" role="status"></p></div>
 <script>
@@ -82,7 +83,7 @@ function applyLocale(next,updateUrl=false){
  document.querySelector('#now-title').textContent=voiceName(selected);
  document.querySelector('#now-meta').textContent=label(selected)+' · '+selected.id;
  const file=locale==='en'?'en.html':'index.html';
- const publicUrl='https://purryc.github.io/kokoro-voice-gallery/'+(locale==='en'?file:'');
+ const publicUrl='https://purryc.github.io/TTS-kokoro-voice-gallery/'+(locale==='en'?file:'');
  document.querySelector('link[rel="canonical"]').href=publicUrl;document.querySelector('meta[property="og:url"]').content=publicUrl;
  if(updateUrl&&location.protocol!=='file:'){const url=new URL(location.href);url.pathname=url.pathname.replace(/[^/]*$/,file);history.replaceState(null,'',url);}
  setStatus(statusKey);render();

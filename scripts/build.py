@@ -20,7 +20,7 @@ def main():
     template=(ROOT/'templates/index.html').read_text()
     assert template.count('__VOICE_DATA__')==1 and template.count('__DISTRIBUTION__')==1
     for locale, filename in [('zh','index.html'),('en','en.html')]:
-        values={**translations[locale], 'locale':locale, 'zhCurrent':'page' if locale=='zh' else 'false', 'enCurrent':'page' if locale=='en' else 'false', 'aboutFile':'about-en.html' if locale=='en' else 'about.html', 'pageUrl':'https://purryc.github.io/kokoro-voice-gallery/'+('en.html' if locale=='en' else '')}
+        values={**translations[locale], 'locale':locale, 'zhCurrent':'page' if locale=='zh' else 'false', 'enCurrent':'page' if locale=='en' else 'false', 'aboutFile':'about-en.html' if locale=='en' else 'about.html', 'pageUrl':'https://purryc.github.io/TTS-kokoro-voice-gallery/'+('en.html' if locale=='en' else '')}
         page=template.replace('__DISTRIBUTION__',table)
         page=re.sub(r'__([a-zA-Z]+)__', lambda m:html.escape(values[m[1]],quote=True) if m[1] in values else m[0], page)
         page=page.replace('__VOICE_DATA__',json.dumps(voices,ensure_ascii=False).replace('</','<\\/')).replace('__I18N_DATA__',json.dumps(translations,ensure_ascii=False).replace('</','<\\/'))

@@ -4,7 +4,7 @@
 
 ## English
 
-Kokoro Voice Gallery is an independent community project by purryc / shinoyan.
+TTS-kokoro-voice-gallery is an independent community project by purryc / shinoyan.
 It is not affiliated with or endorsed by hexgrad or the Kokoro model authors.
 
 ## Models and voice presets
@@ -60,7 +60,7 @@ and attribution. No rights to the Kokoro name or third-party marks are claimed.
 
 ## 中文说明
 
-Kokoro Voice Gallery 是由 purryc / shinoyan 制作的独立社区项目，与 hexgrad 或 Kokoro 模型作者无隶属或背书关系。
+TTS-kokoro-voice-gallery 是由 purryc / shinoyan 制作的独立社区项目，与 hexgrad 或 Kokoro 模型作者无隶属或背书关系。
 
 ### 模型与预设音色
 

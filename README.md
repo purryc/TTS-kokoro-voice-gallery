@@ -1,10 +1,12 @@
-# Kokoro Voice Gallery
+# TTS-kokoro-voice-gallery
 
 [中文](#中文说明) · [English](#english)
 
-[中文试听页](https://purryc.github.io/kokoro-voice-gallery/) · [English gallery](https://purryc.github.io/kokoro-voice-gallery/en.html)
+[中文试听页](https://purryc.github.io/TTS-kokoro-voice-gallery/) · [English gallery](https://purryc.github.io/TTS-kokoro-voice-gallery/en.html)
 
 ## 中文说明
+
+**文字转语音（TTS）音色试听库：试听、比较并挑选适合你的 Kokoro 声音。**
 
 157 个 Kokoro 官方预设音色的独立社区试听页。支持试听、搜索、语言与男女声筛选、浏览器本地收藏、MP3 下载。界面及来源页支持中英切换，切换时保留播放进度、筛选与收藏；试听文案保留实际朗读的原文。页面只播放预生成样音，无后端、无 API key、无浏览器内语音合成。
 
@@ -59,6 +61,8 @@ Kokoro v1.0：54 音色；Kokoro v1.1-zh：103 音色。样音使用 Kokoro 0.9.
 ---
 
 ## English
+
+**A text-to-speech (TTS) voice preview gallery: listen, compare and choose a Kokoro voice.**
 
 An independent community gallery of 157 official Kokoro preset voices. Preview samples, search, filter by language and female/male voice, save browser-local favorites, and download MP3 files. The interface and provenance pages are available in Chinese and English. Switching the interface language preserves playback position, filters and favorites; sample scripts remain in the language actually spoken. Audio is pre-generated: no backend, API key or in-browser speech synthesis is needed.
 
