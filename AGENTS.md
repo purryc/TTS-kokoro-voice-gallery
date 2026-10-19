@@ -15,6 +15,7 @@
 ## Product rules
 - Public project name: `TTS-kokoro-voice-gallery`. Describe its purpose in both languages as a text-to-speech voice preview gallery. Keep repository, Pages links and metadata aligned when renaming.
 - Show female and male voice groups and per-language distribution.
+- Place an always-visible All / Female / Male button group directly below the language filters. Combine both filters with search and favorites; do not duplicate gender selection in a dropdown.
 - Sort groups female then male; within each group, Chinese, English, then other languages; natural-sort official voice IDs. Assign stable catalog row numbers 001–157 without renaming official IDs.
 - Preserve single-player behavior, search, language/gender filters, favorites and downloads; no autoplay on page load.
 - Clearly identify the site as an independent community project, not the official model website.
