@@ -24,6 +24,25 @@ def main():
     assert json.loads((ROOT/'site/voices.json').read_text())==voices
     assert '__VOICE_DATA__' not in page and '__DISTRIBUTION__' not in page
     assert '独立社区试听项目' in page
+    translations=json.loads((ROOT/'data/i18n.json').read_text())
+    assert translations['zh'].keys()==translations['en'].keys()
+    for translation_key in translations['zh']:
+        assert translations['zh'][translation_key] and translations['en'][translation_key]
+        assert re.findall(r'\{\w+\}',translations['zh'][translation_key])==re.findall(r'\{\w+\}',translations['en'][translation_key])
+    for filename,locale in [('index.html','zh'),('en.html','en')]:
+        localized=(ROOT/'site'/filename).read_text()
+        assert not re.search(r'__[A-Za-z_]+__',localized),filename
+        assert f'<html lang="{translations[locale]["htmlLang"]}">' in localized
+        assert json.loads(localized.split('const voices = ',1)[1].split(';\nconst playIcon',1)[0])==voices
+        assert translations[locale]['heading'] in localized.split('<script>')[0]
+        assert set(re.findall(r'data-i18n(?:-aria|-placeholder)?="([^"]+)"',localized))<=translations[locale].keys()
+    for filename,lang in [('about.html','zh-CN'),('about-en.html','en')]:
+        localized=(ROOT/'site'/filename).read_text()
+        assert f'<html lang="{lang}">' in localized
+        assert (ROOT/'templates'/filename).read_text()==localized
+    for filename in ['README.md','NOTICE.md']:
+        doc=(ROOT/filename).read_text()
+        assert '## 中文说明' in doc and '## English' in doc
     total=0
     for v in voices:
         path=ROOT/'site'/v['file']
@@ -41,6 +60,6 @@ def main():
             if p.is_file() and p.suffix in ['.html','.json','.md','.txt']:
                 text=p.read_text()
                 assert not any(re.search(pattern,text) for pattern in forbidden),f'Private data pattern: {p.relative_to(ROOT)}'
-    print(json.dumps({'voices':157,'female':87,'male':70,'audio_bytes':total,'private_content_scan':'passed','sorting':'passed'}))
+    print(json.dumps({'voices':157,'female':87,'male':70,'audio_bytes':total,'private_content_scan':'passed','sorting':'passed','bilingual_pages_and_docs':'passed'}))
 
 if __name__=='__main__':main()

@@ -4,6 +4,8 @@
 - Public, independent community audition gallery for 157 official Kokoro preset voices.
 - `data/voices.json`: sanitized catalog, source model revisions, demo text, waveform, and relative public audio paths.
 - `templates/index.html`: editable HTML source. `scripts/build.py`: deterministic standard-library build.
+- `data/i18n.json`: matching Chinese/English interface translations. `templates/about.html` and `templates/about-en.html`: localized provenance pages.
+- Build `site/index.html` (Chinese) and `site/en.html` (English), plus both provenance pages. Keep README and NOTICE fully bilingual; preserve the canonical Apache license text.
 - `site/`: generated public website; `site/audio/`: locally generated MP3 demo samples. Deploy only `site/`.
 - `scripts/validate.py`: catalog completeness, order, media, and publication-content checks.
 - `README.md`, `NOTICE.md`, `LICENSE`: usage, provenance and attribution. `site/about.html`: visitor-facing provenance.
@@ -16,6 +18,8 @@
 - Preserve single-player behavior, search, language/gender filters, favorites and downloads; no autoplay on page load.
 - Clearly identify the site as an independent community project, not the official model website.
 - Audio is pre-generated, not browser TTS or a live generation API.
+- All visitor-facing UI, accessibility labels, errors, metadata and project documentation must support Chinese and English with equivalent content. Keep actual spoken sample scripts and official voice IDs unchanged.
+- Switching interface language must preserve playback, selection, filters and favorites. Verify both published language routes and state preservation before reporting completion.
 
 ## Verification and publishing
 - Run `python3 scripts/build.py` and `python3 scripts/validate.py` before commits.
